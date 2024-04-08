@@ -11,10 +11,12 @@ function App() {
 
   const toggleMenu1 = () => {
     setIsOpen1(!isOpen1);
+    setIsOpen2(false)
   };
 
   const toggleMenu2 = () => {
     setIsOpen2(!isOpen2);
+    setIsOpen1(false)
   };
 
   const toggleModal = () => {
@@ -34,7 +36,7 @@ function App() {
           onClick={toggleModal}
           className="lg:hidden text-3xl absolute right-8 top-6 cursor-pointer"
         >
-          <ion-icon name={openModal ? "menu" : ""}></ion-icon>
+          <ion-icon name={openModal ? "" : "menu"}></ion-icon>
         </button>
         <nav
           className={`gap-8 text-gray-500 font-semibold lg:flex lg:items-center 
